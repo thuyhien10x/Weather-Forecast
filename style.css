@@ -1,0 +1,330 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url("wallpaper.jpg");
+
+}
+
+
+.container {
+    width: 1200px;
+    margin: auto;
+    margin-top:50px;
+}
+
+.search-container {
+    text-align: center;
+    margin: 20px;
+    margin-block-end: 40px;
+}
+
+#locationInput {
+    width: 60%;
+    padding: 10px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #2549c0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3f808d;
+}
+
+.currentWeather {
+    width: 100%;
+    height: 200px;
+}
+
+.hourly {
+    flex: 2;
+    height: 150px;
+    background-color: rgba(63, 69, 79, 0.548);
+    border-radius: 20px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #2b2d31;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.hourly-forecast-item {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: rgba(63, 69, 79, 0.548);
+    width: calc(20% - 10px);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hourly-forecast-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+.hourly time {
+    font-size: small;
+}
+
+
+.flex {
+    display: flex;
+    margin-top: 5px;
+}
+
+.day {
+    flex: 1;
+    height: 360px;
+    background-color: rgba(63, 69, 79, 0.548);
+    border-radius: 20px;
+    margin-right: 5px;
+}
+
+
+
+.day-item {
+    width: 100%;
+    height: 50px;
+    margin-top: 1px;
+    padding: 0px;
+}
+
+.air {
+    flex: 2;
+    height: 380px;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    margin-top: 1px;
+
+
+}
+
+.quality {
+    width: 100%;
+    height: 110px;
+    background-color: rgba(63, 69, 79, 0.548);
+    border-radius: 20px;
+    margin-bottom: 5px;
+
+
+}
+
+.top {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 5px;
+    margin-top:5px;
+
+
+}
+
+.bottom {
+    width: 100%;
+    height: 120px;
+
+}
+
+.uv {
+    width: 25%;
+    height: 120px;
+    background-color: rgba(63, 69, 79, 0.548);
+    border-radius: 20px;
+    margin-right: 5px;
+
+}
+
+
+
+.cloud {
+    width: 25%;
+    height: 120px;
+    background-color: rgba(63, 69, 79, 0.548);
+    border-radius: 20px;
+    margin-right: 5px;
+
+
+}
+
+.wind {
+    width: 25%;
+    height: 120px;
+    background-color: rgba(63, 69, 79, 0.548);
+
+    border-radius: 20px;
+    margin-right: 5px;
+
+
+}
+
+.precipitation {
+    width: 25%;
+    height: 120px;
+    background-color: rgba(63, 69, 79, 0.548);
+
+    border-radius: 20px;
+
+}
+
+.feel {
+    width: 25%;
+    height: 120px;
+    background-color: rgba(63, 69, 79, 0.548);
+
+    border-radius: 20px;
+    margin-right: 5px;
+
+
+}
+
+.humidity {
+    width: 25%;
+    height: 120px;
+    border-radius: 20px;
+    margin-right: 5px;
+    background-color: rgba(63, 69, 79, 0.548);
+
+
+}
+
+.visibility {
+    width: 25%;
+    height: 120px;
+    border-radius: 20px;
+    margin-right: 5px;
+    background-color: rgba(63, 69, 79, 0.548);
+
+
+
+}
+
+.pressure {
+    width: 25%;
+    height: 120px;
+    border-radius: 20px;
+    background-color: rgba(63, 69, 79, 0.548);
+
+
+}
+.head {
+    font-size:16px;
+}
+p {
+    color: white;
+    text-align: center;
+}
+
+.clouds-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+body.cloudy {
+    background-color: #2c2f32;
+}
+
+.temp {
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+}
+
+.progress-container {
+    width: 100%;
+    margin: 20px;
+    margin-bottom: 28px;
+    text-align: center;
+    margin-top:0px;
+}
+
+progress {
+    width: 50%;
+    height: 10px;
+    border: 1px solid #373232;
+    border-radius: 20px;
+    background: linear-gradient(to right, #1db136, #f02913);
+}
+
+progress::-webkit-progress-bar {
+    background-color: rgb(29, 48, 91);
+    border-radius: 20px;
+
+}
+
+progress::-webkit-progress-value {
+    background-color: rgb(171, 179, 195);
+    border-radius: 20px;
+
+}
+
+progress {
+    border: 0;
+    height: 10px;
+    border-radius: 20px;
+}
+
+.uv-progress {
+    width: 100px;
+    margin-top: 1px;
+    text-align: center;
+    
+}
+
+.hanoi-map {
+    max-height: 80%;
+    overflow: auto;
+
+}
+
+.day-progress {
+    width: 50%;
+    margin-left: 0px;
+}
+
+.day-progress progress {
+    margin-left: 0px;
+}
+
+.uv-head {
+    font-size:16px;
+    margin-block-end: 1px;
+}
+.uv-current{
+    margin-block-end: 1px;
+
+}
+.air-quality{
+    font-size: 16px;
+    margin-bottom:0px;
+}
+.tieude {
+    font-size: 16px; 
+    margin-block-start:0;
+    padding-top: 10px;
+}
+.city {
+    font-size: 32px;
+    margin-block-end: 20px;
+}

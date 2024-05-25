@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Du Bao Thoi Tiet</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @media only screen and (max-width: 1300px) {
+            .container {
+                width: 100%;
+                
+            }
+            .progress-container {
+                width: 100%;
+            }
+
+            .column {
+                flex-direction: column;
+            }
+            .day-item {
+                justify-content: space-around;;
+            }
+        }
+    </style>
+</head>
+
+<body class="cloudy">
+
+    <div class="container" >
+        <div class="search-container">
+            <input type="text" id="locationInput" placeholder="Enter a location..." />
+            <button onclick="fetchWeather()">Search</button>
+        </div>
+        
+        <div class="currentWeather">
+            <p class="city" id="currentCity">Ha Noi</p>
+            <p class="temp">
+                <span id="currentTemp">--</span>
+                °C
+            </p>
+            <p id="currentWeatherCondition" class="currentWeatherCondition">--</p>
+        </div>
+        <div class="column flex" style="margin-top: 40px;">
+            <div class="day">
+                <p class ="head">6 days forecast</p>
+                <div id="forecast"></div>
+            </div>
+            <div class="air">
+                <div class="quality">
+                    <div>
+                        <p class="tieude">AIR QUALITY</p>
+                    </div>
+                    <p class="air-quality"><span id="currentPM25" class="currentPM25">--</span> - <span id="airQualityLabel" class="airQualityLabel">Good</span></p>
+                    
+                    <div class="progress-container">
+                        <progress id="airQualityProgress" value="0" max="200"></progress>
+                    </div>
+                    
+                    <div class="top">
+                        <div class="flex">
+                            <div class="uv">
+                                <p class="uv-head">UV INDEX</p>
+                                <p class="uv-current"><span id="currentUv" class="currentUv">--</span></p>
+                            
+                            </div>
+                            <div class="cloud">
+                                <p class="head">CLOUD</p>
+                                <p><span id="currentCloud" class="currentCloud">--</span>%</p>
+                            </div>
+                            <div class="wind">
+                                <p class="head">WIND</p>
+                                <p><span id="currentWind" class="currentWind">--</span></p>
+                            </div>
+                            <div class="precipitation">
+                                <p class="head">PRECIPITATION</p>
+                                <p><span id="currentPrecipitation" class="currentPrecipitation">--</span>mm</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="flex">
+                            <div class="feel">
+                                <p class="head">FEELS LIKE</p>
+                                <p><span id="currentFeel" class="currentFeel">--</span>°C</p>
+
+                            </div>
+                            <div class="humidity">
+                                <p class="head">HUMIDITY</p>
+                                <p><span id="currentHumidity" class="currentHumidity">--</span>%</p>
+                            </div>
+                            <div class="visibility">
+                                <p class="head">VISIBILITY</p>
+                                <p><span id="currentVisibility" class="currentVisibility">--</span>km</p>
+                            </div>
+                            <div class="pressure">
+                                <p class="head">PRESSURE</p>
+                                <p><span id="currentPressure" class="currentPressure">--</span>hPa</p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <script src="script.js"></script>
+</body>
+
+</html>
